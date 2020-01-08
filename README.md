@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このアプリはプロ野球チーム横浜DeNAベイスターズのファン専用SNSです。
 
-Things you may want to cover:
+## 機能一覧
 
-* Ruby version
+* 記事投稿・編集・削除
+* ログイン・ログアウト
+* ユーザーのプロフィール画像設定
+* 投稿とユーザーの紐付け
+* いいね機能
 
-* System dependencies
+## 使用技術
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby on rails
+* …
