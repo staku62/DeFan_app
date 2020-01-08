@@ -1,6 +1,7 @@
 # README
 
 このアプリはプロ野球チーム横浜DeNAベイスターズのファン専用SNSです。
+https://dena-fan-app.herokuapp.com/
 
 ## 機能一覧
 
@@ -14,3 +15,4 @@
 
 * Ruby on rails
 * SQLite3
+* Heroku
