@@ -13,4 +13,4 @@
 ## 使用技術
 
 * Ruby on rails
-* …
+* SQLite3
