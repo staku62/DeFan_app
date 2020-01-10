@@ -52,7 +52,8 @@ body {
   width: 100%;
   height: auto;
   min-height: 100%;
-  background-color: #f5f8fa;
+  background-image: url("/yokohama_background.jpeg");
+  background-size: cover;
 }
 
 .container {
@@ -242,6 +243,33 @@ header {
 }
 /* ページネーション ================================ */
 .pagination{
-  margin-top: 20px;
-  font-size: 25px;;
+  font-size: 25px;
+  background-color: white;
 }
+/* レスポンシブ ================================ */
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+#menu-bg {
+background-color: #00FFFF; /*青色*/
+}
+}
+
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+  #menu-bg {
+  background-color: #FF0000; /*赤色*/
+  }
+  #menu-bg {
+    background-color: #FF0000; /*赤色*/
+    }
+  }
+
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+    #menu-bg {
+    background-color: #00FF00; /*緑色*/
+    }
+    }
+
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+    .header-menus{
+      display: none;
+    }
+  }
