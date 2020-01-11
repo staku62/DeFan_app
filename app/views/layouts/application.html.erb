@@ -4,7 +4,7 @@
     <title>DeFan App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,7 +15,47 @@
 
    <body>
     <header>
-      <div class="header-logo">
+    <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <%# ハンバーバーメニューの中身%>
+    <div id="nav-content">
+    <ul class="smp-menu">
+        <% if @current_user %>
+          <li>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </li>
+          <li>
+            <%= link_to("投稿一覧", "/posts/index") %>
+          </li>
+          <li>
+            <%= link_to("新規投稿", "/posts/new") %>
+          </li>
+          <li>
+            <%= link_to("ユーザー一覧", "/users/index") %>
+          </li>
+          <li>
+            <%= link_to("ログアウト", "/logout", {method: :post}) %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("投稿一覧", "/list") %>
+          </li>
+          <li>
+            <%= link_to("ユーザー一覧", "list2") %>
+          </li>
+          <li>
+            <%= link_to("新規登録", "/signup") %>
+          </li>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+    </div>
+    <div class="header-logo">
         <% if @current_user %>
           <%= link_to("DeFanApp", "/posts/index") %>
         <% else %>
@@ -54,6 +94,8 @@
           </li>
         <% end %>
       </ul>
+  </div>
+      
     </header>
 
     <% if flash[:notice] %>
