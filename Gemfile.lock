@@ -86,6 +86,7 @@ GEM
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+      kaminari (>= 0.13.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -150,6 +151,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rb-readline (0.5.5)
     regexp_parser (1.6.0)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
@@ -214,12 +216,14 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   jbuilder (~> 2.7)
-  kaminari (~> 0.17.0)
+  kaminari
+  kaminari-bootstrap (~> 3.0.1)
   listen (>= 3.0.5, < 3.2)
   pg
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.2)
+  rb-readline
   sass-rails (>= 6)
   selenium-webdriver
   spring
