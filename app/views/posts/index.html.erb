@@ -1,5 +1,11 @@
 <div class="main posts-index">
   <div class="container">
+    <%= form_tag posts_index_url, :method => 'get' do %>
+  
+    <%= text_field_tag :search, params[:search], class: "search_form", placeholder: "search"%>
+    <%= submit_tag "Search", :content => nil, class: "search_form" %>
+  
+  <% end %>
     <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-left">

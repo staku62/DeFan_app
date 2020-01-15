@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page]).per(PER)
+    @posts = Post.search(params[:search]).page(params[:page]).per(PER)
   end
   
   def show
@@ -20,10 +21,9 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(
-      content: params[:cantent],
+      content: params[:content],
       user_id: @current_user.id
     )
-    binding.pry
     if @post.save
       flash[:notice] = "投稿を作成しました"
       redirect_to("/posts/index")
